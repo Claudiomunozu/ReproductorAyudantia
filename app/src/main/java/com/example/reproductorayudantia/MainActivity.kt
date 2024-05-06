@@ -2,9 +2,7 @@ package com.example.reproductorayudantia
 
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.widget.Button
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity() {
           playOrNotPlayMusic()
 
 
-           // Toast.makeText("ulse boton", Toast.LENGTH_SHORT).show()
+           // Toast.makeText("pulse boton", Toast.LENGTH_SHORT).show()
         }
 
         savedInstanceState?.let {
@@ -48,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         Log.i("MainActivityReproductor", "onStart")
         mediaPlayer = MediaPlayer.create(this,R.raw.pp_remix)
-        mediaPlayer?.start()    // si lo activo se pone en reproduccion de forma automatica en el onCreate
+        //mediaPlayer?.start()    // si lo activo se pone en reproduccion de forma automatica en el onStart
+        //isPlaying = true
     }
 
     override fun onResume() {
